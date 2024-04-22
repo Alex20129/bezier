@@ -127,8 +127,6 @@ void Widget::build_bezier()
 		bp=lint(ip0, ip1, c);
 		bezier_points->append(bp);
 	}
-
-	emit(pointsObtained());
 }
 
 void Widget::collect_points(QPoint *new_point)
