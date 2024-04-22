@@ -132,7 +132,6 @@ void Widget::build_bezier()
 void Widget::collect_points(QPoint *new_point)
 {
 	user_points->append(QVector2D(*new_point));
-//	qDebug()<<*new_point;
 	delete(new_point);
 	if(user_points->size()>=3)
 	{
