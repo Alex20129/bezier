@@ -56,7 +56,6 @@ void Widget::keyPressEvent(QKeyEvent *event)
 void Widget::mousePressEvent(QMouseEvent *event)
 {
 	event->accept();
-	*p00=QPoint(this->width()/2, this->height()/2);
 	new_point=new(QPoint);
 	*new_point=event->pos()-*p00;
 	emit(haveANewTargetPoint(new_point));
@@ -67,6 +66,7 @@ void Widget::paintEvent(QPaintEvent *event)
 	uint d=5, point_in;
 	QPainter local_painter(this);
 	event->accept();
+	*p00=QPoint(this->width()/2, this->height()/2);
 
 	local_painter.setRenderHint(QPainter::Antialiasing);
 
